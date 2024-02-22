@@ -11,6 +11,10 @@ body {
   font-family: "Poppins", sans-serif;
   color: #17183b;
   height: 100vh;
+  overflow-x: hidden;
+}
+header {
+  overflow: hidden;
 }
 /*navbar*/
 nav {
@@ -40,31 +44,60 @@ nav ul {
 nav ul li {
   cursor: pointer;
   font-size: 14px;
+  position: relative;
+}
+nav ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: #17183b;
+  transition: width 0.2s ease-in-out;
+}
+nav ul li:hover::after {
+  width: 100%;
 }
 i {
   cursor: pointer;
 }
+.iconsNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .iconsNav i {
   padding: 20px;
+}
+.fa-bars {
+  display: none;
 }
 .cart {
   transition: 0.3s ease-in-out;
 }
 .cartAddContainer {
   width: 400px;
+  background: white;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   gap: 30px;
-  border: 1px solid black;
-  padding: 19px;
+  border: 2px solid var(--green);
+  padding: 15px;
   position: absolute;
-  bottom: 0;
-  z-index: 100;
+  top: 100px;
+  right: 20px;
+  z-index: 10;
+  transform: translateX(450px);
+  transition: 0.3s ease-in-out;
 }
 .cartAdd {
   color: var(--green);
+}
+.quantityCartContainer {
+  font-weight: bold;
 }
 
 /*Page produit*/
@@ -259,12 +292,65 @@ a {
 }
 
 /*responsive*/
+.iconsNav:nth-child(2) {
+  display: none;
+}
+.navBurger {
+  width: 190px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  background: white;
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  text-align: center;
+  z-index: 100;
+  display: none;
+  transition: 0.4s ease-in-out;
+}
+.navBurger ul li {
+  font-size: 1.5rem;
+  font-weight: 400;
+  list-style: none;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+  padding: 5px;
+  cursor: pointer;
+  /* border-bottom: 2px solid var(--green); */
+}
+/* .navBurger ul :nth-child(5) {
+  border-bottom: none;
+} */
+.navBurger ul li:hover {
+  background: var(--green);
+  color: white;
+}
+.displayBurger {
+  display: block;
+}
 @media screen and (max-width: 1110px) {
   .productPage {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding-bottom: 50px;
   }
   .product {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  nav ul {
+    display: none;
+  }
+
+  .fa-bars {
+    display: flex;
   }
 }
