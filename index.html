@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/17e72c725f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Page Produit</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <p>Cozy®</p>
+        </div>
+        <ul>
+          <li>Shop</li>
+          <li>Collective</li>
+          <li>Designers</li>
+          <li>About us</li>
+          <li>Contact</li>
+        </ul>
+        <div class="iconsNav">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-cart-shopping cart"></i>
+        </div>
+      </nav>
+      <div class="cartAddContainer">
+        <div class="cartInfos">
+          <p class="cartAdd">Ajout au panier</p>
+          <h2>Meryl Lounge Chair</h2>
+          <p>$149.99</p>
+        </div>
+        <div class="quantityCartContainer">
+          <p>x <span class="quantityCart"></span></p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="productPage">
+        <div class="product">
+          <i class="fa-solid fa-arrow-left"></i>
+          <p class="fsMin category"><span>Chair</span> / Meryl Lounge Chair</p>
+          <h1>Meryl Lounge Chair</h1>
+          <div class="price-rating">
+            <p>$149.99</p>
+            <img src="assets/img/ratings.png" alt="ratings" />
+          </div>
+          <p>
+            The gently curved lines accentuated by sewn details are kind to your
+            body and pleasant to look at. Also, there’s a tilt and
+            height-adjusting mechanism that’s built to outlast years of ups and
+            downs.
+          </p>
+          <div class="coloris">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="buttonCta">
+            <!-- faire bouton quantité -->
+            <div class="quantity">
+              <i class="fa-solid fa-minus" id="minQuantity"></i>
+              <p id="quantityNumber">1</p>
+              <i class="fa-solid fa-plus" id="plusQuantity"></i>
+            </div>
+            <button class="cta">Add to cart</button>
+          </div>
+          <p class="fsMin">
+            Free 3-5 day shipping / Tool-free assembly / 30-day trial
+          </p>
+          <div class="wishlist-media">
+            <div class="wishlist">
+              <i class="fa-regular fa-heart emptyHearth"></i>
+              <!-- <i class="fa-solid fa-heart fullHearth"></i> -->
+              <p>Add to Wishlist</p>
+            </div>
+            <div class="medias">
+              <a href="https://www.facebook.com/" target="_blank"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="https://twitter.com/" target="_blank"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a href="https://www.pinterest.fr/" target="_blank"
+                ><i class="fa-brands fa-pinterest"></i
+              ></a>
+              <a href="https://www.instagram.com/" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="rightPart">
+          <div class="productImage">
+            <!-- <p>01 / 05</p> -->
+            <img src="assets/img/chair1.jpeg" alt="" class="mainImage" />
+          </div>
+          <div class="switchImg">
+            <i class="fa-solid fa-chevron-left"></i>
+            <i class="fa-solid fa-chevron-right nextImg"></i>
+          </div>
+          <div class="imagesContainer">
+            <div>
+              <img src="assets/img/chair1.jpeg" alt="" class="otherImg" />
+            </div>
+            <div>
+              <img src="assets/img/chair2.jpeg" alt="" class="otherImg" />
+            </div>
+            <div>
+              <img src="assets/img/chair3.jpeg" alt="" class="otherImg" />
+            </div>
+            <!-- <div>
+              <img src="assets/img/chair4.jpeg" alt="" class="otherImg" />
+            </div> -->
+            <div>
+              <img src="assets/img/chair5.png" alt="" class="otherImg" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,270 @@
+:root {
+  --green: rgb(0, 166, 160);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #17183b;
+  height: 100vh;
+}
+/*navbar*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(207, 207, 207);
+  height: 80px;
+  padding: 0 20px;
+  position: relative;
+}
+.logo p {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+nav ul li {
+  cursor: pointer;
+  font-size: 14px;
+}
+i {
+  cursor: pointer;
+}
+.iconsNav i {
+  padding: 20px;
+}
+.cart {
+  transition: 0.3s ease-in-out;
+}
+.cartAddContainer {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  border: 1px solid black;
+  padding: 19px;
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+}
+.cartAdd {
+  color: var(--green);
+}
+
+/*Page produit*/
+.productPage {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin: 40px 0 40px 40px;
+}
+.fsMin {
+  font-size: 0.8rem;
+}
+.category {
+  font-weight: 600;
+}
+.category span {
+  color: rgba(0, 0, 0, 0.301);
+}
+.product {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+  width: 40vw;
+}
+h1 {
+  font-size: 44px;
+  line-height: 56px;
+  font-weight: 700;
+}
+.price-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+.price-rating img {
+  height: 20px;
+}
+/*coloris*/
+.coloris {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+}
+.coloris div {
+  height: 20px;
+  width: 20px;
+  background: black;
+  border-radius: 30px;
+}
+.coloris div:nth-child(2) {
+  background: rgb(50, 50, 195);
+}
+.coloris div:nth-child(3) {
+  background: var(--green);
+}
+.coloris div:nth-child(4) {
+  background: rgb(71, 36, 7);
+}
+
+/*cta and quantity*/
+.buttonCta {
+  display: flex;
+  gap: 20px;
+}
+.buttonCta button,
+.buttonCta div {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 15px 0;
+  width: 150px;
+}
+.quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  border: 1px solid lightgray;
+}
+.quantity i {
+  padding: 5px;
+}
+.cta {
+  color: white;
+  background: var(--green);
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+.cta:hover {
+  transform: scale(1.1);
+}
+/*wishlist and social medias*/
+.wishlist-media {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wishlist,
+.medias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.medias {
+  gap: 20px;
+}
+a {
+  color: #17183b;
+}
+.wishlist {
+  color: var(--green);
+  cursor: pointer;
+  font-weight: 500;
+}
+/* .emptyHearth {
+  display: block;
+}
+.fullHearth {
+  display: none;
+} */
+
+/*Right Part : Image*/
+.switchImg {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  right: 80px;
+}
+.switchImg i {
+  padding: 10px;
+}
+.rightPart {
+  display: flex;
+  flex-direction: column;
+}
+.productImage {
+  overflow: hidden;
+}
+.mainImage {
+  height: 350px;
+  position: relative;
+  transition: opacity 1s ease-in-out;
+}
+/*mainImage opacity animation*/
+@keyframes displayImg {
+  0% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.displayImg {
+  animation: displayImg 0.4s ease-in-out;
+}
+.imagesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.imagesContainer div {
+  height: 80px;
+  width: 80px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.clickedImg {
+  border: 2px solid var(--green);
+}
+
+.imagesContainer div img {
+  object-fit: cover;
+  height: 65px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*responsive*/
+@media screen and (max-width: 1110px) {
+  .productPage {
+    display: flex;
+    flex-direction: column;
+  }
+  .product {
+    width: 100%;
+  }
+}
