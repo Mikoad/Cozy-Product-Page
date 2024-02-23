@@ -59,6 +59,13 @@ nav ul li::after {
 nav ul li:hover::after {
   width: 100%;
 }
+/* .searchBar form input {
+  padding: 5px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.301);
+  display: none;
+  transition: 0.2s ease-in-out;
+} */
+
 i {
   cursor: pointer;
 }
@@ -77,6 +84,7 @@ i {
   transition: 0.3s ease-in-out;
 }
 .cartAddContainer {
+  display: none;
   width: 400px;
   background: white;
   display: flex;
@@ -103,10 +111,10 @@ i {
 /*Page produit*/
 .productPage {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-start;
 
-  margin: 40px 0 40px 40px;
+  padding: 30px 5vw 0;
 }
 .fsMin {
   font-size: 0.8rem;
@@ -229,7 +237,7 @@ a {
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  right: 80px;
+  right: 10vw;
 }
 .switchImg i {
   padding: 10px;
@@ -292,7 +300,7 @@ a {
 }
 
 /*responsive*/
-.iconsNav:nth-child(2) {
+.iconsNav .burgerLogo {
   display: none;
 }
 .navBurger {
@@ -330,7 +338,7 @@ a {
 .displayBurger {
   display: block;
 }
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1207px) {
   .productPage {
     display: flex;
     flex-direction: column-reverse;
@@ -346,11 +354,21 @@ a {
 }
 
 @media screen and (max-width: 850px) {
+  .iconsNav .burgerLogo {
+    display: block;
+  }
   nav ul {
     display: none;
   }
 
   .fa-bars {
     display: flex;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  /* modifier taille d'image pour responsive */
+  .mainImage {
+    height: 250px;
   }
 }
