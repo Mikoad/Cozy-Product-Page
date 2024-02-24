@@ -408,3 +408,9 @@ a {
     height: 200px;
   }
 }
+@media screen and (max-width: 470px) {
+  h1 {
+    font-size: 25px;
+    line-height: 36px;
+  }
+}
