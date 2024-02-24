@@ -92,9 +92,11 @@ cta.addEventListener("click", () => {
     cart.style.color = "";
     cart.style.transform = "";
   }, 1700);
+  // à changer par un classlist add (opacity, z-index)
   cartAddContainer.style.transform = "translateX(0)";
   cartAddContainer.style.display = "block";
   setTimeout(() => {
+    //pareil classlist
     cartAddContainer.style.transform = "translateX(450px)";
     cartAddContainer.style.display = "none";
   }, 1700);
