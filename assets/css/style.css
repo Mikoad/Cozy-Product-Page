@@ -12,10 +12,13 @@ body {
   font-family: "Poppins", sans-serif;
   color: #17183b;
   height: 100vh;
-  overflow-x: hidden;
 }
 header {
   overflow: hidden;
+}
+.cta a {
+  color: white;
+  text-decoration: none;
 }
 /*navbar*/
 nav {
@@ -394,5 +397,10 @@ a {
   /* modifier taille d'image pour responsive */
   .mainImage {
     height: 250px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .mainImage {
+    height: 200px;
   }
 }
