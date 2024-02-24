@@ -93,12 +93,10 @@ cta.addEventListener("click", () => {
     cart.style.transform = "";
   }, 1700);
   // à changer par un classlist add (opacity, z-index)
-  cartAddContainer.style.transform = "translateX(0)";
-  cartAddContainer.style.display = "block";
+  cartAddContainer.classList.add("displayCart");
   setTimeout(() => {
-    //pareil classlist
-    cartAddContainer.style.transform = "translateX(450px)";
-    cartAddContainer.style.display = "none";
+    //pareil classli
+    cartAddContainer.classList.remove("displayCart");
   }, 1700);
 });
 
@@ -109,3 +107,18 @@ cta.addEventListener("click", () => {
   let currentQuantity = parseInt(quantityNumber.textContent);
   quantityCart.textContent = currentQuantity;
 });
+
+//change var color on click
+// const black = document.querySelector(".black");
+// const blue = document.querySelector(".blue");
+// const brown = document.querySelector(".brown");
+
+// function changeColor() {
+//   document.documentElement.style.setProperty("--green", "rgb(50, 50, 195);");
+//   const elementsGreen = document.querySelectorAll('[style*="--green');
+//   elementsGreen.forEach((element) => {
+//     element.style.color = "rgb(50, 50, 195);";
+//   });
+// }
+
+// blue.addEventListener("click", changeColor());
