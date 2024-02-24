@@ -381,6 +381,13 @@ a {
   .fa-bars {
     display: flex;
   }
+  .cartAddContainer {
+    width: 340px;
+    position: absolute;
+
+    right: 10px;
+    gap: 10px;
+  }
 }
 
 @media screen and (max-width: 750px) {
