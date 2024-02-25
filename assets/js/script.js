@@ -35,6 +35,7 @@ const mainImage = document.querySelector(".mainImage");
 const otherImages = document.querySelectorAll(".otherImg");
 const nextImg = document.querySelector(".nextImg");
 const previousImg = document.querySelector(".previousImg");
+
 let currentIndexImg = 0;
 
 //..with next and previous arrows
@@ -50,10 +51,11 @@ previousImg.addEventListener("click", () => {
   if (currentIndexImg > 0) {
     currentIndexImg--;
     mainImage.classList.add("displayImg");
+  } else {
+    currentIndexImg = otherImages.length - 1;
+    mainImage.classList.add("displayImg");
   }
-  // if (currentIndexImg <= 0) {
-  //   currentIndexImg = 3;
-  // }
+
   mainImage.src = otherImages[currentIndexImg].src;
 });
 //..or click on image
@@ -122,3 +124,5 @@ cta.addEventListener("click", () => {
 // }
 
 // blue.addEventListener("click", changeColor());
+
+//imgNumber qui change
