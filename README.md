@@ -4,7 +4,7 @@ Ce projet est une page produit d’un fauteuil, réalisée à partir d’une maq
 
 ## Lien vers le projet
 
-[👉 Voir la démo en ligne]([https://ton-lien-de-demo.com](https://mikoad.github.io/Cozy-Product-Page/)) 
+[👉 Voir la démo en ligne](https://mikoad.github.io/Cozy-Product-Page/)
 
 ## ✨ Fonctionnalités
 
